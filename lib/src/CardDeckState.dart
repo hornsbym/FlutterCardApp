@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 
 import 'CardDeck.dart';
-import 'PlayingCard.dart';
 
 class CardDeckState extends State<CardDeck>
     with SingleTickerProviderStateMixin {
@@ -82,7 +81,6 @@ class CardDeckState extends State<CardDeck>
     });
   }
 
-
   void playAnimation() {
     animController.forward();
   }
@@ -93,3 +91,5 @@ class CardDeckState extends State<CardDeck>
     super.dispose();
   }
 }
+
+

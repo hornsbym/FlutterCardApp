@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:intellij_flutter_app/src/CustomTheme.dart';
 import 'package:intellij_flutter_app/src/HomePage.dart';
 
+import 'Themes.dart';
+
 /// Point of entry for the application.
-void main() => runApp(MyApp());
+void main() => runApp(
+  CustomTheme(
+    initialThemeKey: ThemeKeys.SECONDARY,
+    child: MyApp()
+  ));
 
 /// The top-level class for the application.
 class MyApp extends StatelessWidget {
@@ -13,9 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: Color.fromRGBO(0, 0, 0, 1),
-      ),
+      theme: CustomTheme.of(context),
       home: HomePage(),
     );
   }
