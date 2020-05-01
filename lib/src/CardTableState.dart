@@ -36,6 +36,7 @@ class CardTableState extends State<CardTable>
 
   @override
   Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
     return Column(
       children: <Widget>[
         this._deck,
@@ -47,11 +48,11 @@ class CardTableState extends State<CardTable>
               RaisedButton(
                   child: Text("Shuffle"),
                   onPressed: this._shuffleCards,
-                  color: Colors.white),
+                  ),
               RaisedButton(
                   child: Text("Reset"),
                   onPressed: this._resetCards,
-                  color: Colors.white),
+                ),
             ],
           )
         )

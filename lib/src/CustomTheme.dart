@@ -49,8 +49,8 @@ class CustomThemeState extends State<CustomTheme> {
     super.initState();
   }
 
-  void changeTheme(ThemeKeys themeKey) {
-    if (_theme.primaryColor == Colors.green) {
+  void changeTheme() {
+    if (_theme.primaryColor == Colors.black) {
       setState(() {
         _theme = Themes.getThemeFromKey(ThemeKeys.SECONDARY);
       });
